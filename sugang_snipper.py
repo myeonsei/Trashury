@@ -10,7 +10,7 @@ search.click()
 search.send_keys('251.320')
 search.send_keys(Keys.ENTER)
 
-for i in range(10):
+while 1:
     driver.find_element_by_css_selector('#cond00 > a.btn_search_ok').click()
     pop = driver.find_element_by_css_selector('#content > div > div.seach_cont.mt_30 > div.tbl_sec > div.gray_top > table > tbody > tr:nth-child(1) > td:nth-child(22)').get_property('innerText')
     if int(pop) < 80:
